@@ -1,0 +1,196 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-fluid
+	display: block
+	max-width: 100%
+	height: auto
+	margin: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+#preloader
+	position: fixed
+	top: 0
+	left: 0
+	height: 100vh
+	width: 100%
+	z-index: 999
+	background-color: #fff
+	background-image: url(../img/preloader.gif)
+	background-position: center
+	background-repeat: no-repeat
+
+
+h2
+	font-family: 'Philosopher', sans-serif;
+	font-size: 1.5rem
+	font-style: italic
+	
+#mainParallax .container
+	min-height: 100vh
+	display: flex	
+	flex-direction: column
+	justify-content: space-between
+	color: #fff
+	align-items: center
+	text-align: center
+	margin-bottom: 30px
+
+#mainParallax h1
+	font-family: 'Permanent Marker', cursive
+	font-size: 4rem
+	line-height: 5rem
+
+#mainParallax h3
+	font-family: 'Philosopher'
+	font-size: 1.5rem
+	font-style: italic
+
+#mainParallax p
+	font-family: 'Philosopher'
+	font-weight: 400
+	font-size: 1.1rem
+	margin-bottom: .5rem
+
+#mainParallax .parallax-bottom img
+	margin: 50px 0
+	border: 2px solid rgba(255,255,255,.3)
+	border-radius: 50%
+	padding: 10px
+	transition: all .2 ease
+
+#mainParallax .parallax-bottom img:hover
+	transform: translate(0,2px)
+
+.wrapper
+	padding: 30px 0
+	min-height: 300px
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.wrapper img
+	margin-left: auto
+	padding: 15px
+
+#showreal
+	background: url('../img/mpagr-showreel.jpg') center
+	background-size: cover
+	color: #fff
+
+
+h2
+	text-align: center
+	text-transform: uppercase
+	color: #121212
+	margin-bottom: 60px
+	position: relative
+	font-style: normal
+
+h2::after
+	content: ''
+	border-bottom: 2px solid #babfc2
+	bottom: -25px
+	display: inline-block
+	left: calc(50% - 35px)
+	position: absolute
+	width: 70px
+
+#map
+	min-height: 500px
+	width: 100%
+
+#contacts
+	background: url(../img/cinema_2.jpg) center
+	background-size: cover
+	position: relative
+
+#contacts::before
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(255,255,255,.1)
+
+#contacts .container
+	background-color: rgba(201,216,247,.95)
+	border-radius: 20px
+	padding: 30px 15px
+
+
+.h1bg
+	font-family: 'Philosopher', sans-serif
+	height: 190px
+	color: #fff
+	display: flex
+	align-items: flex-end
+	background-size: cover
+
+#abouth1bg
+	background: url('../img/bgnd-about.jpg') center
+#contactsh1bg
+	background: url('../img/bgnd-contacts.jpg') center
+#servicesh1bg
+	background: url('../img/bgnd-services.jpg') center
+#projectsh1bg
+	background: url('../img/bgnd-projects.jpg') center
+#audioh1bg
+	background: url('../img/bgnd-audio.jpg') center
+#videoh1bg
+	background: url('../img/bgnd-video.jpg') center
+#clothesh1bg
+	background: url('../img/bgnd-services.jpg') center
+
+.owl-carousel.projects img
+	padding: 0
+	
+.owl-carousel.partners img
+	width: 152px
+	margin: auto
+
+
+
+
+
+
+
+
+
+@import "menu"
+@import "socialicons"
+
+
+@import "media" // Always at the end

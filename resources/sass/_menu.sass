@@ -1,0 +1,84 @@
+// Меню
+.parallax-menu, .menu
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	width: 100%
+	align-items: center
+	min-height: 200px
+	position: relative
+
+.menu
+	min-height: 150px
+
+
+#togglelabel, #togglebutton
+	display: none
+
+.nav
+	display: flex
+	flex-direction: column
+	position: relative
+	align-items: center
+
+#menutoggle a
+	display: block
+	text-align: center
+	width: 100%
+	padding: 5px 20px
+	color: #fff
+	text-decoration: none
+	transition: all .2s ease
+
+.parallax-menu #menutoggle a:hover
+	color: #08b
+
+.parallax-menu #menutoggle a.active
+	color: #08b
+
+.parallax-menu #menutoggle a.active:hover
+	color: #fff
+
+.menu #menutoggle a
+	color: #08b
+
+.menu #menutoggle a:hover
+	color: #3be
+
+.menu #menutoggle a.active
+	color: #3be
+
+.menu #menutoggle a.active:hover
+	color: #08b
+
+#menutoggle ul
+	list-style: none
+	padding-left: 0
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	justify-items: center
+
+#menutoggle li
+	display: flex
+	flex-direction: column
+
+#menutoggle ul>li
+	position: relative
+
+#menutoggle li>ul
+	flex-direction: column
+	max-height: 0
+	transition: max-height 0.15s ease-out
+	overflow: hidden
+	position: absolute
+	top: 36px
+	min-width: 250px
+	align-items: flex-start
+
+.menu #menutoggle li>ul
+	background: #fff
+
+#menutoggle li:hover ul
+	max-height: 500px
+	transition: max-height 0.25s ease-in

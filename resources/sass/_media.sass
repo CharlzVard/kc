@@ -1,0 +1,137 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+	.wrapper img
+		margin-left: auto
+		margin-right: auto
+
+
+	.parallax-menu img, .menu img
+		margin: 20px 0
+
+	nav.nav *
+		margin: 0
+
+	.parallax-menu, .menu
+		flex-direction: column
+
+	nav.nav, #menutoggle
+		width: 100%
+		margin-bottom: 15px
+
+	#togglelabel, #togglebutton
+		display: flex
+		cursor: pointer
+	
+	.menu #togglelabel
+		color: #000
+
+	#togglebutton
+		display: block
+		width: 100%
+		position: relative
+		height: 40px
+		outline: none
+		-webkit-appearance: none
+		border: none
+		border: 1px solid rgba(255,255,255,.3)
+
+	.menu #togglebutton
+		border: 1px solid rgba(0,0,0,.7)
+
+	#togglebutton::before
+		content: ''
+		position: absolute
+		left: 10px
+		top: 20px
+		border: 7px solid transparent
+		border-top: 7px solid #fff
+		transition: .5s
+
+	.menu #togglebutton::before
+		border-top: 7px solid #000
+
+	
+	#togglebutton:checked::before
+		border: 7px solid transparent
+		border-bottom: 7px solid #fff
+		top: 10px
+
+	.menu #togglebutton:checked::before
+		border-bottom: 7px solid #000
+
+	#togglelabel
+		position: absolute
+		top: 0
+		left: 35px
+		color: aliceblue
+		font-size: 20px
+		line-height: 40px
+		transition: .5s
+	
+	#menutoggle a
+		padding: 5px 0
+		background-color: rgba(255,255,255,.1)
+		color: #fff
+		border-top: 1px solid rgba(255,255,255,.1)
+
+	.menu #menutoggle a
+		padding: 5px 0
+		background-color: rgba(0,0,0,.9)
+		color: #fff
+		border-top: 1px solid rgba(255,255,255,.1)
+
+		
+
+	#menutoggle li>ul
+		flex-direction: column
+		max-height: 500px
+		overflow: show
+		position: relative
+		top: 0
+		align-items: center
+		background-color: transparent
+
+	#menutoggle	li>ul li
+		display: block
+		width: 100%
+	
+	#menutoggle>ul
+		flex-direction: column
+		max-height: 0
+		transition: max-height 0.15s ease-out
+		overflow: hidden
+	
+	#togglebutton:checked ~ ul
+		max-height: 500px
+		transition: max-height 0.25s ease-in
+		overflow: show
+	
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
